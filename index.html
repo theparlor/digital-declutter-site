@@ -144,6 +144,187 @@
   </div>
 </div></section>
 
+<section id="diagrams">
+<style>
+  #diagrams .diag-pair{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}
+  #diagrams .diag-block{background:var(--ground-2);border:1px solid var(--line);border-radius:12px;padding:22px 20px 18px}
+  #diagrams .diag-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:12px;font-family:'Spectral'}
+  @media(max-width:760px){#diagrams .diag-pair{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="kicker">How it comes to be &middot; where it lives</div>
+  <h2>Two views of the discipline.</h2>
+  <p class="body">The first diagram traces how a single file moves through the system &mdash; from initial notice through governance-chain consultation to coherent placement. The second shows where Digital Declutter sits in the portfolio: which products it reads, what it produces, and the Intent loop that governs it.</p>
+
+  <div class="diag-pair">
+
+    <!-- DIAGRAM 1: FLOW — How it comes to be -->
+    <div class="diag-block">
+      <div class="diag-label">How it comes to be</div>
+      <svg viewBox="0 0 480 310" width="100%" height="auto" style="max-width:480px;display:block" xmlns="http://www.w3.org/2000/svg" aria-label="Flow diagram: how a file moves through digital-declutter">
+        <defs>
+          <linearGradient id="dd-flow" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#E8772B"/>
+            <stop offset="100%" stop-color="#7E8A98"/>
+          </linearGradient>
+          <marker id="dd-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#C9A45C" opacity="0.75"/>
+          </marker>
+          <marker id="dd-arr-steel" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#7E8A98" opacity="0.75"/>
+          </marker>
+        </defs>
+
+        <!-- Node 1: File noticed -->
+        <rect x="8" y="116" width="76" height="40" rx="7" fill="#2b2219" stroke="#C9A45C" stroke-width="1.2"/>
+        <text x="46" y="131" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="9.5" fill="#ECE3D4">File</text>
+        <text x="46" y="143" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="9.5" fill="#ECE3D4">noticed</text>
+
+        <!-- Arrow 1→2 -->
+        <line x1="84" y1="136" x2="102" y2="136" stroke="#C9A45C" stroke-width="1.4" marker-end="url(#dd-arr)"/>
+
+        <!-- Node 2: Rules consulted -->
+        <rect x="104" y="116" width="76" height="40" rx="7" fill="#2b2219" stroke="#C9A45C" stroke-width="1.2"/>
+        <text x="142" y="131" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="9.5" fill="#ECE3D4">Rules</text>
+        <text x="142" y="143" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="9.5" fill="#ECE3D4">consulted</text>
+
+        <!-- Rules badge -->
+        <rect x="108" y="162" width="68" height="14" rx="4" fill="rgba(232,119,43,0.10)" stroke="#9A7F4E" stroke-width="0.8"/>
+        <text x="142" y="172" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7" fill="#C9A45C">28 behavioral rules</text>
+
+        <!-- Arrow 2→3 -->
+        <line x1="180" y1="136" x2="198" y2="136" stroke="#C9A45C" stroke-width="1.4" marker-end="url(#dd-arr)"/>
+
+        <!-- Node 3: Governance chain — three stacked steps -->
+        <rect x="200" y="88" width="80" height="26" rx="6" fill="#211a13" stroke="#E8772B" stroke-width="1.2"/>
+        <text x="240" y="103" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8" fill="#F2A24A">AGENTS.md</text>
+
+        <rect x="200" y="118" width="80" height="26" rx="6" fill="#211a13" stroke="#E8772B" stroke-width="1.5"/>
+        <text x="240" y="133" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8" fill="#F2A24A">RULES.md</text>
+
+        <rect x="200" y="148" width="80" height="26" rx="6" fill="#211a13" stroke="#E8772B" stroke-width="1.2"/>
+        <text x="240" y="163" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8" fill="#F2A24A">schema</text>
+
+        <!-- bracket label: chain -->
+        <text x="240" y="82" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8" fill="#9A7F4E" font-style="italic">chain</text>
+
+        <!-- Arrows chain→placement from all nodes -->
+        <line x1="280" y1="101" x2="312" y2="121" stroke="#E8772B" stroke-width="1" stroke-opacity="0.7" marker-end="url(#dd-arr)"/>
+        <line x1="280" y1="131" x2="312" y2="136" stroke="#E8772B" stroke-width="1" stroke-opacity="0.9" marker-end="url(#dd-arr)"/>
+        <line x1="280" y1="161" x2="312" y2="151" stroke="#E8772B" stroke-width="1" stroke-opacity="0.7" marker-end="url(#dd-arr)"/>
+
+        <!-- Node 4: Placement resolved -->
+        <rect x="314" y="116" width="82" height="40" rx="7" fill="#2b2219" stroke="#C9A45C" stroke-width="1.2"/>
+        <text x="355" y="130" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="9" fill="#ECE3D4">Placement</text>
+        <text x="355" y="141" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#B3A890">resolved</text>
+        <text x="355" y="151" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7.5" fill="#85795F">AGENTS.md wins</text>
+
+        <!-- Arrow 4→5 -->
+        <line x1="396" y1="136" x2="414" y2="136" stroke="#C9A45C" stroke-width="1.4" marker-end="url(#dd-arr)"/>
+
+        <!-- Node 5: Filed coherently -->
+        <rect x="416" y="116" width="56" height="40" rx="7" fill="#17120e" stroke="#7E8A98" stroke-width="1.2"/>
+        <text x="444" y="130" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#AAB4C0">Filed</text>
+        <text x="444" y="141" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8" fill="#AAB4C0">coherently</text>
+        <text x="444" y="152" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7" fill="#7E8A98">Workspaces</text>
+
+        <!-- River metaphor label -->
+        <text x="46" y="172" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7.5" fill="#9A7F4E" font-style="italic">river, not lake</text>
+
+        <!-- Downloads→Workspaces flow hint -->
+        <path d="M46,178 Q46,200 142,200 Q280,200 355,178" fill="none" stroke="#3a2f23" stroke-width="0.8" stroke-dasharray="3,3"/>
+        <text x="200" y="216" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7" fill="#3a2f23" font-style="italic">Downloads is a river &middot; Workspaces is the destination</text>
+
+        <!-- Bottom label -->
+        <text x="240" y="296" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8" fill="#85795F">Notice &rarr; Rules &rarr; Governance chain &rarr; Placement resolved &rarr; Filed</text>
+      </svg>
+    </div>
+
+    <!-- DIAGRAM 2: ARCHITECTURE — Where it lives -->
+    <div class="diag-block">
+      <div class="diag-label">Where it lives</div>
+      <svg viewBox="0 0 480 310" width="100%" height="auto" style="max-width:480px;display:block" xmlns="http://www.w3.org/2000/svg" aria-label="Architecture diagram: digital-declutter position in the portfolio">
+        <defs>
+          <linearGradient id="dd-ag-main" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#E8772B" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#2b2219" stop-opacity="0.9"/>
+          </linearGradient>
+          <linearGradient id="dd-ag-ref" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#C9A45C" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#211a13" stop-opacity="0.8"/>
+          </linearGradient>
+          <marker id="dd-aarr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#C9A45C" opacity="0.8"/>
+          </marker>
+          <marker id="dd-aarr-out" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#E8772B" opacity="0.8"/>
+          </marker>
+        </defs>
+
+        <!-- Intent loop veil — faint background rectangle -->
+        <rect x="10" y="14" width="460" height="254" rx="12" fill="none" stroke="#3a2f23" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="26" y="28" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#3a2f23" font-style="italic">Intent loop — Notice · Spec · Execute · Observe</text>
+
+        <!-- Reference-substrate box — left -->
+        <rect x="24" y="90" width="100" height="118" rx="10" fill="url(#dd-ag-ref)" stroke="#C9A45C" stroke-width="1.3"/>
+        <text x="74" y="110" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="11" font-weight="700" fill="#C9A45C">reference-</text>
+        <text x="74" y="124" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="11" font-weight="700" fill="#C9A45C">substrate</text>
+        <line x1="44" y1="132" x2="104" y2="132" stroke="#3a2f23" stroke-width="0.8"/>
+        <text x="74" y="147" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#B3A890">AGENTS.md</text>
+        <text x="74" y="160" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#B3A890">schemas</text>
+        <text x="74" y="173" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#B3A890">templates</text>
+        <!-- placement authority label -->
+        <text x="74" y="198" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7.5" fill="#85795F" font-style="italic">placement authority</text>
+
+        <!-- Digital Declutter box — centre -->
+        <rect x="172" y="78" width="130" height="142" rx="10" fill="url(#dd-ag-main)" stroke="#E8772B" stroke-width="1.8"/>
+        <text x="237" y="102" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="12" font-weight="800" fill="#ECE3D4">Digital</text>
+        <text x="237" y="116" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="12" font-weight="800" fill="#ECE3D4">Declutter</text>
+        <line x1="190" y1="124" x2="284" y2="124" stroke="#3a2f23" stroke-width="0.8"/>
+        <text x="237" y="139" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#B3A890">Organization</text>
+        <text x="237" y="152" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#B3A890">position</text>
+        <!-- 28-rules badge -->
+        <rect x="191" y="166" width="92" height="16" rx="5" fill="rgba(232,119,43,0.10)" stroke="#9A7F4E" stroke-width="0.8"/>
+        <text x="237" y="177" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7.5" fill="#C9A45C">28 behavioral rules</text>
+        <!-- outputs -->
+        <text x="237" y="203" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7.5" fill="#85795F">rules contract</text>
+        <text x="237" y="215" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7.5" fill="#85795F">7 skills &middot; reference library</text>
+
+        <!-- org-design-tooling box — below reference-substrate, left -->
+        <rect x="24" y="224" width="100" height="36" rx="8" fill="#211a13" stroke="#9A7F4E" stroke-width="1"/>
+        <text x="74" y="237" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="9" font-weight="700" fill="#C9A45C">org-design-</text>
+        <text x="74" y="249" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8" fill="#85795F">governance audit</text>
+
+        <!-- You / coherent workspace box — right -->
+        <rect x="352" y="118" width="100" height="44" rx="9" fill="#211a13" stroke="#7E8A98" stroke-width="1.2"/>
+        <text x="402" y="136" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="12" font-weight="700" fill="#AAB4C0">Coherent</text>
+        <text x="402" y="150" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8.5" fill="#7E8A98">workspace</text>
+
+        <!-- reference-substrate → Digital Declutter arrow (reads) -->
+        <line x1="124" y1="145" x2="170" y2="145" stroke="#C9A45C" stroke-width="1.4" marker-end="url(#dd-aarr)"/>
+        <text x="147" y="139" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7.5" fill="#9A7F4E" font-style="italic">reads</text>
+
+        <!-- org-design-tooling ↔ reference-substrate shared dashed arrow -->
+        <line x1="74" y1="208" x2="74" y2="224" stroke="#9A7F4E" stroke-width="1" stroke-dasharray="3,3"/>
+        <!-- sibling label -->
+        <path d="M128,242 Q180,258 172,230" fill="none" stroke="#3a2f23" stroke-width="0.8" stroke-dasharray="3,3"/>
+        <text x="152" y="258" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7" fill="#3a2f23" font-style="italic">sibling</text>
+
+        <!-- Digital Declutter → Coherent workspace arrow (output) -->
+        <line x1="302" y1="145" x2="350" y2="145" stroke="#E8772B" stroke-width="1.6" marker-end="url(#dd-aarr-out)"/>
+        <text x="326" y="139" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="7.5" fill="#9A7F4E" font-style="italic">output</text>
+
+        <!-- Intent loop corners — cycle arrows -->
+        <path d="M460,40 Q470,149 460,258" fill="none" stroke="#3a2f23" stroke-width="1" stroke-dasharray="4,5" marker-end="url(#dd-aarr)"/>
+
+        <!-- Bottom label -->
+        <text x="237" y="296" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="8" fill="#85795F">reference-substrate (authority) &rarr; Digital Declutter (discipline) &rarr; coherent workspace &nbsp;&nbsp;&middot;&nbsp;&nbsp; org-design-tooling is sibling</text>
+      </svg>
+    </div>
+
+  </div>
+</div></section>
+
 <section id="veil" class="veil-section"><div class="wrap">
   <div class="kicker">Behind the veil</div>
   <h2>How Digital Declutter was forged.</h2>
