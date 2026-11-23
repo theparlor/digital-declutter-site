@@ -1,0 +1,15 @@
+{
+  "id": "2026-11-23-claude-site-wording-2026-11-23",
+  "provider": "claude",
+  "status": "complete",
+  "branch": "agent/claude/2026-11-23-site-wording-2026-11-23",
+  "worktree": "../digital-declutter-site-wt-2026-11-23-site-wording-2026-11-23",
+  "base_commit": "4e78654",
+  "objective": "",
+  "owned_paths": [
+    "index.html"
+  ],
+  "started": "2026-11-23T15:35:24-05:00",
+  "handoff": ".agents/handoffs/2026-11-23-claude-site-wording-2026-11-23.md",
+  "landed": "2026-11-23T18:37:42-05:00"
+}
